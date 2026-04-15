@@ -10,7 +10,6 @@ public:
     FSMState(int state, std::string state_string) : BaseState(state, state_string){
         spdlog::info("Initializing State_{} ...", state_string);
         auto transitions = param::config["FSM"][state_string]["transitions"];
-
         if(transitions){
             auto transition_map = transitions.as<std::map<std::string, std::string>>();
             for(auto it = transition_map.begin(); it != transition_map.end(); ++it){
@@ -40,12 +39,15 @@ public:
             )
         );
     }
+
     void pre_run(){
         lowstate->update();
     }
+
     void post_run(){
         lowcmd->unlockAndPublish();
     }
+    
     static std::unique_ptr<LowCmd_t> lowcmd;
     static std::shared_ptr<LowState_t> lowstate;
 };

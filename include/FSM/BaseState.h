@@ -9,7 +9,7 @@ inline boost::bimap<int, std::string> FSMStringMap;
 
 class BaseState {
 public:
-    BaseState(int state, std::string state_string) : state_(state){
+    BaseState(int state, std::string state_string) : state_(state) {
         FSMStringMap.insert({state, state_string});
     }
 
@@ -31,7 +31,7 @@ private:
 using FsmFactory = std::function<std::shared_ptr<BaseState>(int, std::string)>;
 using FsmMap     = std::unordered_map<std::string, FsmFactory>;
 
-inline FsmMap& getFsmMap(){
+inline FsmMap& getFsmMap() {
     static FsmMap fsmMap;
     return fsmMap;
 }
@@ -44,4 +44,4 @@ inline FsmMap& getFsmMap(){
         __registrar_##Derived() {                                                       \
             getFsmMap()[#Derived] = __factory_##Derived;                                \
         }                                                                               \
-    } __registrar_instance_##Derived;
+    } __registrar_instance_##Derived;                                                   \

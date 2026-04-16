@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/ak1ra/Quadruped/go2_deploy/go2/build",
+  "command": "/usr/bin/c++   -I/usr/include/eigen3 -I/usr/local/include/ddscxx -I/usr/local/include/iceoryx/v2.0.2 -I/home/ak1ra/Quadruped/go2_deploy/go2/include -I/home/ak1ra/Quadruped/go2_deploy/go2/../thirdparty/onnxruntime-linux-x64-1.23.2/include -I/home/ak1ra/Quadruped/go2_deploy/go2/../thirdparty -I/home/ak1ra/Quadruped/go2_deploy/go2/../include    -std=gnu++17 -o CMakeFiles/go2_ctrl.dir/main.cpp.o -c /home/ak1ra/Quadruped/go2_deploy/go2/main.cpp",
+  "file": "/home/ak1ra/Quadruped/go2_deploy/go2/main.cpp"
+},
+{
+  "directory": "/home/ak1ra/Quadruped/go2_deploy/go2/build",
+  "command": "/usr/bin/c++   -I/usr/include/eigen3 -I/usr/local/include/ddscxx -I/usr/local/include/iceoryx/v2.0.2 -I/home/ak1ra/Quadruped/go2_deploy/go2/include -I/home/ak1ra/Quadruped/go2_deploy/go2/../thirdparty/onnxruntime-linux-x64-1.23.2/include -I/home/ak1ra/Quadruped/go2_deploy/go2/../thirdparty -I/home/ak1ra/Quadruped/go2_deploy/go2/../include    -std=gnu++17 -o CMakeFiles/go2_controller_lib.dir/src/State_RLBase.cpp.o -c /home/ak1ra/Quadruped/go2_deploy/go2/src/State_RLBase.cpp",
+  "file": "/home/ak1ra/Quadruped/go2_deploy/go2/src/State_RLBase.cpp"
+}
+]

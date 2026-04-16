@@ -3,18 +3,19 @@
 #include "Types.h"
 #include "param.h"
 #include "FSM/BaseState.h"
+#include "isaaclab/devices/keyboard/keyboard.h"
 #include "unitree_joystick_dsl.hpp"
 
 class FSMState : public BaseState{
 public:
-    FSMState(int state, std::string state_string) : BaseState(state, state_string){
+    FSMState(int state, std::string state_string) : BaseState(state, state_string) {
         spdlog::info("Initializing State_{} ...", state_string);
         auto transitions = param::config["FSM"][state_string]["transitions"];
-        if(transitions){
+        if (transitions) {
             auto transition_map = transitions.as<std::map<std::string, std::string>>();
-            for(auto it = transition_map.begin(); it != transition_map.end(); ++it){
+            for (auto it = transition_map.begin(); it != transition_map.end(); ++it) {
                 std::string target_fsm = it->first;
-                if(!FSMStringMap.right.count(target_fsm)){
+                if (!FSMStringMap.right.count(target_fsm)) {
                     spdlog::warn("FSM State_'{}' not found in FSMStringMap!", target_fsm);
                     continue;
                 }
@@ -40,14 +41,15 @@ public:
         );
     }
 
-    void pre_run(){
+    void pre_run() {
         lowstate->update();
     }
 
-    void post_run(){
+    void post_run() {
         lowcmd->unlockAndPublish();
     }
     
     static std::unique_ptr<LowCmd_t> lowcmd;
     static std::shared_ptr<LowState_t> lowstate;
+    static std::shared_ptr<Keyboard> keyboard;
 };

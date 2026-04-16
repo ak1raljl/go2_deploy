@@ -1,0 +1,1 @@
+This project deploys Reinforcement Learning (RL) policies on the Unitree Go2 Edu robot (equipped with Orin NX). The code is modified from [unitree_rl_lab](https://github.com/unitreerobotics/unitree_rl_lab) and supports deployment through Ethernet or the onboard computer.

@@ -38,7 +38,7 @@ inline void create_logger(std::string log_path)
 
 namespace param
 {
-inline std::string VERSION = "1.0.0.1";
+inline std::string VERSION = "v1";
 inline std::filesystem::path bin_path;
 inline std::filesystem::path proj_dir;
 inline std::filesystem::path config_dir;

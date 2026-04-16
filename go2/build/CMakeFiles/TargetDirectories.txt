@@ -1,4 +1,0 @@
-/home/ak1ra/Quadruped/go2_deploy/go2/build/CMakeFiles/rebuild_cache.dir
-/home/ak1ra/Quadruped/go2_deploy/go2/build/CMakeFiles/edit_cache.dir
-/home/ak1ra/Quadruped/go2_deploy/go2/build/CMakeFiles/go2_ctrl.dir
-/home/ak1ra/Quadruped/go2_deploy/go2/build/CMakeFiles/go2_controller_lib.dir
